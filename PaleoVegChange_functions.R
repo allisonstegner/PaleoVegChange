@@ -1,11 +1,10 @@
 #################################################
-# Functions for analyzing bidoversity and community change in pollen datasets from the Neotoma database
+# Functions for analyzing bidoversity and community change in Neotoma db pollen datasets
 # Copyright: 2023 M. Allison Stegner
 #################################################
 
 # LIBRARIES #######################################
 library(vegan,quietly=T)
-# library(neotoma,quietly=T)
 library(bcp,quietly=T)
 library(princurve,quietly=T)
 
@@ -659,12 +658,11 @@ gain_loss<-function(POL_DL,iter.siteresamp,iter.amresamp,N.years.prior,N.sites){
 }
 
 # sqs___________________________
-# from Alroy, J (2010) Fair sampling of taxonomic richness and unbiased estimation of orgination and extinction rates. The Paleontological Society Papers, 16: 55-80.
-# available at https://bio.mq.edu.au/~jalroy/SQS.html
+# from Alroy, J (2010) Fair sampling of taxonomic richness and unbiased estimation of orgination and extinction rates. The Paleontological Society Papers, 16: 55-80. available at https://bio.mq.edu.au/~jalroy/SQS.html
 
 sqs<-function(ab,q,trials,method,ignore.singletons,dominant)	{
 
-	params <- array(data=NA,dim=0) # MAS - edited from original to remove dimnames
+	params <- array(data=NA,dim=0) # This line edited from original to remove dimnames
 	if (missing(trials))	{
 		trials <- 100
 	}

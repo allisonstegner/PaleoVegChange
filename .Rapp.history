@@ -862,3 +862,87 @@ plot.ts(lossk,bin.means.sub,YLAB="",new=F,add=F,line.col=rgb(loss.rgb[1],loss.rg
 	mtext(reg.id[i],3,2,cex=1.4,outer=T)#
 #
 }
+# LOAD DATA ########################################
+# LOAD NEOTOMA R OBJECT___#
+load('PaleoVegChange/pol_dlx_2020-12-01.Rdata')#
+#
+# LOAD AGE MODELS___#
+# Bayesian age models used here are from Wang et al. (2019) Bayesian ages for pollen records since the last glaciation. Sci Data 6, 176#
+# code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma#
+# Age models here are provided with permission from Y. Wang#
+#
+path<-"PaleoVegChange/Wang-et-al-Cores/Cores_all" # file path for age model data#
+#
+# LOAD FUNCTIONS ########################################
+source('PaleoVegChange/PaleoVegChange_functions.R', chdir = TRUE)
+getwt()
+getwd()
+# LOAD DATA ########################################
+# LOAD NEOTOMA R OBJECT___#
+load('pol_dlx_2020-12-01.Rdata')#
+#
+# LOAD AGE MODELS___#
+# Bayesian age models used here are from Wang et al. (2019) Bayesian ages for pollen records since the last glaciation. Sci Data 6, 176#
+# code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma#
+# Age models here are provided with permission from Y. Wang#
+#
+path<-"Wang-et-al-Cores/Cores_all" # file path for age model data#
+#
+# LOAD FUNCTIONS ########################################
+source('PaleoVegChange_functions.R', chdir = TRUE)
+# ANALYSIS #########################################
+# DEFINE BINS#
+step<- -250#
+ageolder<-13950#
+bins<-seq(ageolder,step,step)#
+bin.means<-(bins[-length(bins)]+bins[-1])/2
+################ CONTINENT SCALE ANALYSIS#
+# settings#
+iter.siteresamp=50000 #
+iter.amresamp=1000 #
+N.sites<-100
+# CALCULATE ABRUPT CHANGES________________________________________#
+# per site______________________#
+# Using a Neotoma download object, run principle curve on the pollen from each site, and calculate BCP#
+eco.group<-c("TRSH","UPHE") # identify which ecological groups to include in pollen dataset#
+threshold<-0.5 # bcp posterior probability threshold#
+#
+multi.bcp<-list()#
+for (i in 1:length(pol_dlx)){#
+	print(i)#
+	pol_ds<-pol_dlx[[i]]#
+	am_posteriors<-get_am_posteriors(pol_ds)#
+	am_posteriors<-am_posteriors[complete.cases(am_posteriors),]#
+	prep.pol<-prep_pollen(pol_ds,eco.group,type="pct")#
+	# remove rows with NA pollen data#
+	na.inds<-complete.cases(prep.pol$prep.pol)#
+	prep.pol$prep.pol<-prep.pol$prep.pol[na.inds,]#
+	prep.pol$depth<-prep.pol$depth[na.inds]#
+	am_posteriors<-am_posteriors[na.inds,]#
+	multi.bcp[[i]]<-ac_agejigger(prep.pol,am_posteriors,iters=iter.amresamp,type="bcp",threshold)#
+}#
+#
+names(multi.bcp)<-names(pol_dlx)
+# CALCULATE ABRUPT CHANGES________________________________________#
+# per site______________________#
+# Using a Neotoma download object, run principle curve on the pollen from each site, and calculate BCP#
+eco.group<-c("TRSH","UPHE") # identify which ecological groups to include in pollen dataset#
+threshold<-0.5 # bcp posterior probability threshold#
+#
+multi.bcp<-list()#
+for (i in 1:length(pol_dlx)){#
+	print(i)#
+	pol_ds<-pol_dlx[[i]]#
+	am_posteriors<-get_am_posteriors(pol_ds)#
+	am_posteriors<-am_posteriors[complete.cases(am_posteriors),]#
+	prep.pol<-prep_pollen(pol_ds,eco.group,type="pct")#
+	# remove rows with NA pollen data#
+	na.inds<-complete.cases(prep.pol$prep.pol)#
+	prep.pol$prep.pol<-prep.pol$prep.pol[na.inds,]#
+	prep.pol$depth<-prep.pol$depth[na.inds]#
+	am_posteriors<-am_posteriors[na.inds,]#
+	multi.bcp[[i]]<-ac_agejigger(prep.pol,am_posteriors,iters=iter.amresamp,type="bcp",threshold)#
+}#
+#
+names(multi.bcp)<-names(pol_dlx)
+bcp.resamp<-resample.bin.tally(bins,multi.bcp,iter=iter.siteresamp,N.sites=N.sites)

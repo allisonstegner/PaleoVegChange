@@ -1,21 +1,21 @@
 #################################################
-# Code to analyze bidoversity and community change in pollen datasets from the Neotoma database
+# Code to analyze bidoversity and community change in Neotoma db pollen datasets
 # Copyright: 2023 M. Allison Stegner
 #################################################
 
 # LOAD DATA #######################################
 # LOAD NEOTOMA R OBJECT___
-load('PaleoVegChange/pol_dlx_2020-12-01.Rdata')
+load('pol_dlx_2020-12-01.Rdata')
 
 # LOAD AGE MODELS___
 # Bayesian age models used here are from Wang et al. (2019) Bayesian ages for pollen records since the last glaciation. Sci Data 6, 176
 # code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma
 # Age models here are provided with permission from Y. Wang
 
-path<-"PaleoVegChange/Wang-et-al-Cores/Cores_all" # file path for age model data
+path<-"Wang-et-al-Cores/Cores_all" # file path for age model data
 
 # LOAD FUNCTIONS #######################################
-source('PaleoVegChange/PaleoVegChange_functions.R', chdir = TRUE)
+source('PaleoVegChange_functions.R', chdir = TRUE)
 
 # ANALYSIS ########################################
 # DEFINE BINS
@@ -68,9 +68,8 @@ for (i in 1:length(pol_dlx)){
 
 names(multi.bcp)<-names(pol_dlx)
 
-# AC iteration and slotting into bins__
+# Abrupt change iteration and slotting into bins__
 # integrate a resampling routine so that the same number of sites (N) is used for each time bin
-# acs is an age jiggered AC object
 bcp.resamp<-resample.bin.tally(bins,multi.bcp,iter=iter.siteresamp,N.sites=N.sites)
 
 # # Quick plot

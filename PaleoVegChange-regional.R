@@ -10,14 +10,14 @@ library(geosphere)
 
 # LOAD DATA #######################################
 # NEOTOMA R OBJECT___
-load('PaleoVegChange/pol_dlx_2020-12-01.Rdata')
+load('pol_dlx_2020-12-01.Rdata')
 
 # LOAD AGE MODELS___
 # Bayesian age models used here are from Wang et al. (2019) Bayesian ages for pollen records since the last glaciation. Sci Data 6, 176
 # code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma
 # Age models here are provided with permission from Y. Wang
 
-path<-"PaleoVegChange/Wang-et-al-Cores/Cores_all" # file path for age model data
+path<-"Wang-et-al-Cores/Cores_all" # file path for age model data
 
 # LOAD ECOREGIONS SHAPEFILE__
 # Download the Level I Ecoregions of North America Shapefile available at:
@@ -26,7 +26,7 @@ ecoregions<-readOGR("na_cec_eco_l1/NA_CEC_Eco_Level1.shp") # replace with approp
 
 # FUNCTIONS #####################
 # LOAD FUNCTIONS__
-source('PaleoVegChange/PaleoVegChange_functions.R', chdir = TRUE)
+source('PaleoVegChange_functions.R', chdir = TRUE)
 
 # ADDITIONAL FUNCTIONS FOR DEFIINING REGIONS___
 extract.coords<-function(pol_dl_obj){

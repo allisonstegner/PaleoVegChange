@@ -1,29 +1,28 @@
 #################################################
 # Code to choose Neotoma pollen datasets with Bayesian age models
-# And to search for ACES across many sites
 # Copyright: 2023 M. Allison Stegner
 #################################################
 
 # LIBRARIES #######################################
-# library(neotoma,quietly=T)
+# library(neotoma,quietly=T) # depreciated
 
-# GET DATA #######################################
-
-# limit to sites with Yue's bulk baconizing age models__________________________
-min.samp<-20 #minimum number of samples in time series, regardless of resolution
-max.resolution<-250 #mean resolution (#samples/time must be this value or lower)
-prop.length.cutoff<-0.1 #sites with hiatuses longer that this proportion will be flagged and info about time segments before and after each hiatus will be collected
-min.amt.time<-2000 # total minimum duration for the entire time series. relevent for hiatus functions
-
-
-
+# LOAD DATA #######################################
 # Load age models___
 # Bayesian age models used here are from Wang et al. (2019) Bayesian ages for pollen records since the last glaciation. Sci Data 6, 176
 # code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma
 # Age models here are provided with permission from Y. Wang
 
-wang.cores.meta<-read.csv("PaleoVegChange/Wang et al Cores/SiteInfo_allsites.csv")
-path<-"PaleoVegChange/Wang-et-al-Cores/Cores_all"
+wang.cores.meta<-read.csv("Wang et al Cores/SiteInfo_allsites.csv")
+path<-"Wang-et-al-Cores/Cores_all"
+
+# GET DATA #######################################
+# set criteria for including sites based on sample number, resolution, etc.
+
+# limit to sites with Wang et al. 2019 bacon age models
+min.samp<-20 # minimum number of samples in time series, regardless of resolution
+max.resolution<-250 # mean resolution (# samples/time must be this value or lower)
+prop.length.cutoff<-0.1 # sites with hiatuses longer that this proportion will be flagged and info about time segments before and after each hiatus will be collected
+min.amt.time<-2000 # total minimum duration for the entire time series. 
 
 full.cores<-wang.cores.meta[wang.cores.meta$AgeModel_completeness %in% "full",] # age models for sites where the full dataset was modeled
 part.cores<-wang.cores.meta[wang.cores.meta$AgeModel_completeness %in% "part",] # age models for sites where only part of the dataset was modeled
@@ -59,7 +58,6 @@ for (i in 1:length(handles)){
 keepers<-keepers[!is.na(keepers)]
 
 full.ds<-full.cores[full.cores$handle %in% keepers,c("datasetid","handle")]
-
 
 # get datasets for cores with partial age models_____
 handles<-as.vector(part.cores$handle)
