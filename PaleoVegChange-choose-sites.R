@@ -12,8 +12,8 @@
 # code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma
 # Age models here are provided with permission from Y. Wang
 
-wang.cores.meta<-read.csv("Wang et al Cores/SiteInfo_allsites.csv")
-path<-"Wang-et-al-Cores/Cores_all"
+wang.cores.meta<-read.csv("SiteInfo_allsites.csv")
+path<-"Wang-et-al-Cores"
 
 # GET DATA #######################################
 # set criteria for including sites based on sample number, resolution, etc.

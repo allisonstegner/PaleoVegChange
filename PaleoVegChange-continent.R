@@ -12,7 +12,7 @@ load('pol_dlx_2020-12-01.Rdata')
 # code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma
 # Age models here are provided with permission from Y. Wang
 
-path<-"Wang-et-al-Cores/Cores_all" # file path for age model data
+path<-"Wang-et-al-Cores" # file path for age model data
 
 # LOAD FUNCTIONS #######################################
 source('PaleoVegChange_functions.R', chdir = TRUE)
@@ -79,7 +79,7 @@ bcp.resamp<-resample.bin.tally(bins,multi.bcp,iter=iter.siteresamp,N.sites=N.sit
 # bin.quants<-bin.quants[,ccs]
 # bin.ends<-bin.ends[ccs]
 
-# plot(bin.ends,bin.quants["50%",],type="l",ylim=c(0,20))
+# plot(bin.ends,bin.quants["50%",],type="l",ylim=c(0,25),xlim=c(13000,0))
 # polygon(c(bin.ends,rev(bin.ends)),c(bin.quants["2.5%",],rev(bin.quants["97.5%",])))
 
 # LOSS/GAIN ANALYSIS_________________________
@@ -98,8 +98,8 @@ gl.out<-gain_loss(POL_DL=pol_dlx,iter.siteresamp=iter.siteresamp,iter.amresamp=i
 # lossk<-gl.out[[6]] # Loss
 # gaink<-gl.out[[5]] # Gain
 # bin.ends<-bins[-1] # plot at the end of the bin
-# plot.ts(lossk,bin.ends,YLAB="",new=F,add=F,line.col="black",poly.col="gray",YLIM=c(0,10),XLIM=c(0,14000),hatched=F)
-# plot.ts(gaink,bin.ends,YLAB="",new=F,add=T,line.col="blue",poly.col="lightblue",XLIM=c(0,14000),hatched=F)
+# plot.ts(lossk,bin.ends,YLAB="",new=F,add=F,line.col="black",poly.col="gray",YLIM=c(0,10),XLIM=c(14000,0),hatched=F)
+# plot.ts(gaink,bin.ends,YLAB="",new=F,add=T,line.col="blue",poly.col="lightblue",XLIM=c(14000,0),hatched=F)
 # axis(1)
 # axis(2)
 # legend("topleft",c("Gain","Loss"),col=c("lightblue","gray"),pch=15,bty="n",cex=1.5)

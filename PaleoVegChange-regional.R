@@ -1,6 +1,5 @@
 #################################################
-# Code to analyze bidoversity and community change in pollen datasets from the Neotoma database
-# in regional subsets
+# Code to analyze bidoversity and community change in pollen datasets from the Neotoma database in regional subsets
 # Copyright: 2023 M. Allison Stegner
 #################################################
 
@@ -17,7 +16,7 @@ load('pol_dlx_2020-12-01.Rdata')
 # code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma
 # Age models here are provided with permission from Y. Wang
 
-path<-"Wang-et-al-Cores/Cores_all" # file path for age model data
+path<-"Wang-et-al-Cores" # file path for age model data
 
 # LOAD ECOREGIONS SHAPEFILE__
 # Download the Level I Ecoregions of North America Shapefile available at:
