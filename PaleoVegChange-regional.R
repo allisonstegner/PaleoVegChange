@@ -154,6 +154,26 @@ sites.inbin<-list(Aobj,Bobj,Cobj,Dobj,Eobj,Fobj,Gobj)
 regions.lab<-c("A","B","C","D","E","F","G")
 names(sites.inbin)<-regions.lab
 
+# add to sites metadata table: number of samples, time span, number of terrestrial taxa
+
+meta.out<-matrix(NA,nrow=nrow(site.meta),ncol=4)
+for (i in 1:nrow(site.meta)){
+	site.i<-pol_dlx[[site.meta$dataset.id[i]]]
+	n.samp<-nrow(site.i$sample.meta) # number of samples
+	age.range<-round(range(site.i$sample.meta$age)) # time span
+	n.terrestrial<-ncol(clean_pollen(site.i,type="pct",eco.group=c("TRSH","UPHE"))) # number of terrestrial pollen types
+	
+	meta.out[i,]<-c(n.samp,n.terrestrial,age.range)
+}
+
+colnames(meta.out)<-c("N samples","N terrestrial pollen types","Age Younger","Age Older")
+
+
+meta.data.full<-cbind(site.meta[1:4],meta.out,site.meta[,5:6])
+
+write.csv(meta.data.full,"~/Desktop/Research_Git/fourpointtwo/2022-01/results/site-metadata.csv")
+
+
 # COMPUTE DIVERSITY AND COMMUNITY CHANGE METRICS---
 # Settings___
 step<- -250
