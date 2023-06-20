@@ -160,18 +160,23 @@ meta.out<-matrix(NA,nrow=nrow(site.meta),ncol=4)
 for (i in 1:nrow(site.meta)){
 	site.i<-pol_dlx[[site.meta$dataset.id[i]]]
 	n.samp<-nrow(site.i$sample.meta) # number of samples
-	age.range<-round(range(site.i$sample.meta$age)) # time span
+	# age.range<-round(range(site.i$sample.meta$age)) # time span
 	n.terrestrial<-ncol(clean_pollen(site.i,type="pct",eco.group=c("TRSH","UPHE"))) # number of terrestrial pollen types
+	
+	pol_ds<-pol_dlx[[i]]
+	handlej<-pol_ds$dataset$dataset.meta$collection.handle # get site handle
+	handle.path<-paste(path,"/",handlej,sep="") 
+	file.name<-dir(handle.path,pattern="ages.txt") # use handle to import bacon iterations
+	file.path<-paste(handle.path,"/",file.name,sep="")
+	am<-read.table(file.path,header=T)
+	age.range<-range(am$median)
 	
 	meta.out[i,]<-c(n.samp,n.terrestrial,age.range)
 }
 
 colnames(meta.out)<-c("N samples","N terrestrial pollen types","Age Younger","Age Older")
 
-
 meta.data.full<-cbind(site.meta[1:4],meta.out,site.meta[,5:6])
-
-write.csv(meta.data.full,"~/Desktop/Research_Git/fourpointtwo/2022-01/results/site-metadata.csv")
 
 
 # COMPUTE DIVERSITY AND COMMUNITY CHANGE METRICS---

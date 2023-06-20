@@ -1,769 +1,395 @@
-# COMPOSITE PLOTS ########################################
-# trim times series to start at the same time bin____#
-reg.id<-c("A","B","C","D","E","F","G")#
-bin.means<-bins[-1]#
+38-14
+24*3
+40*50
+50/2000
+448-299
+448-298
+298+133
+298-149
+299-147
+296-149
+448-298
+1.875/2
+1/8
+2-0.125
+?pwr.t.test
+??pwr.t.test
+pwr.t.test(d=0.125,sig.level=0.5,power=0.8,type="paired",alternative="two.sided")
+library(pwr)
+pwr.t.test(d=0.125,sig.level=0.5,power=0.8,type="paired",alternative="two.sided")
+pwr.t.test(d=0.125,sig.level=0.05,power=0.8,type="paired",alternative="two.sided")
+pwr.chisq.test(w = 0.125, df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = 0.125, df = 1, sig.level = 0.05, power = 0.9)
+250*.12
+chi.sq()
+?chisq.test
+matrix(c(0,250,30,250),nrow=2,ncol=2)
+matrix(c(0,250,30,250),nrow=2,ncol=2,byrow=T)
+matrix(c(0,250,30,220),nrow=2,ncol=2,byrow=T)
+demo<-matrix(c(0,250,30,220),nrow=2,ncol=2,byrow=T)
+chisq.test(demo)
+demo<-matrix(c(0,25,3,22),nrow=2,ncol=2,byrow=T)
+chisq.test(demo)
+demo<-matrix(c(0,50,6,44),nrow=2,ncol=2,byrow=T)
+chisq.test(demo)
+sum(demo)
+demo<-matrix(c(1,49,6,44),nrow=2,ncol=2,byrow=T)
+chisq.test(demo)
+demo<-matrix(c(0,100,12,88),nrow=2,ncol=2,byrow=T)
+chisq.test(demo)
+demo<-matrix(c(1,99,12,88),nrow=2,ncol=2,byrow=T)
+chisq.test(demo)
+demo<-matrix(c(2,98,12,88),nrow=2,ncol=2,byrow=T)
+chisq.test(demo)
+demo<-matrix(c(3,97,12,88),nrow=2,ncol=2,byrow=T)
+chisq.test(demo)
+ES.h
+?ES.h
+pwr.chisq.test(w = ES.h (0.2,0.1875), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.h(p1=0.2,p2=0.1875), df = 1, sig.level = 0.05, power = 0.8)
+ES.h(p1=0.2,p2=0.1875)
+?ES.h
+h<-ES.h(0.5,0.4)
+h
+pwr.chisq.test(w = ES.h(p1=0.2, p2=0.1), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.h(p1=0.2, p2=0.15), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.h(p1=0.2, p2=0.1875), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.h(p1=0.8, p2=0.7875), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.h(p1=0.12, p2=0), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.h(p1=0.2, p2=0.1), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+null<-c(20,80,20,80)#
+alt<-c(19,81,20,80)#
 #
-sqs.rgb<-c(170,51,119)#
-ac.rgb<-c(34,136,51)#
-gain.rgb<-c(204,187,68)#
-loss.rgb<-c(102,204,238) # 0,119,187#
-fad.rgb<-c(238,102,119) #238,51,119#
-lad.rgb<-c(68,119,170) #51,187,238#
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+1-0.1875
+null<-c(0.2,0.8,0.2,0.8)#
+alt<-c(0.1875,0.8125,0.2,0.8)#
 #
-# for (i in 1:length(regions)){#
-for (i in 1:4){#
-	print(i)#
-	max.age<-14000#
-	XLIM<-c(14000,0)#
-	axis.ticks<-seq(14000,0,-2000)#
-	# Raw Richness#
-	# richnessk<-div.run[[6]]#
-	# richnessk<-richnessk[-cut.inds,]#
-	# SQS#
-	sqsk<-div.flad.list[[i]][[3]]#
-	sqs.ylim<-c(0,10)#
-	# BCP#
-	bcp.i<-bcp.resamp.list[[i]]#
-	bcpk<-t(bcp.i$bin.quants[c(1,3,5),])#
-	ac.ylim<-c(0,9)#
-	# Loss#
-	lossk<-gl.out.list[[i]][[6]]#
-	# Gain#
-	gaink<-gl.out.list[[i]][[5]]#
-	lossgain.ylim<-c(0,5)#
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+?ES.w1
+alt<-c(0.1,0.9,0.2,0.8)
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+1/8
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+null<-c(0.2,0.8,0.2,0.8)#
+alt<-c(0.1875,0.8125,0.2,0.8)#
 #
-	# FAD#
-	fadk<-div.flad.list[[i]][[1]]#
-	# LAD#
-	ladk<-div.flad.list[[i]][[2]]#
-	flad.ylim<-c(0,6)#
-	# trim to length#
-	cut.inds<-which(bin.means > max.age)#
-	if (length(cut.inds)==0){#
-		bin.means.sub<-bin.means#
-		sqsk<-sqsk#
-		bcpk<-bcpk#
-		lossk<-lossk#
-		gaink<-gaink#
-		fadk<-fadk#
-		ladk<-ladk#
-	} else {#
-		bin.means.sub<-bin.means[-cut.inds]#
-		sqsk<-sqsk[-cut.inds,]#
-		bcpk<-bcpk[-cut.inds,]#
-		lossk<-lossk[-cut.inds,]#
-		gaink<-gaink[-cut.inds,]#
-		fadk<-fadk[-cut.inds,]#
-		ladk<-ladk[-cut.inds,]#
-	}#
+# alt<-c(0.1,0.9,0.2,0.8)#
 #
-	# PLOT_______#
-	dev.new(width=4,height=6)#
-	par(mfrow=c(4,1),mar=c(0.2,4,0.1,1),oma=c(4,1,4,1))#
-		plot.ts(bcpk,bin.means.sub,YLAB="",new=F,add=F,line.col=rgb(ac.rgb[1],ac.rgb[2],ac.rgb[3],max=255),poly.col=rgb(ac.rgb[1],ac.rgb[2],ac.rgb[3],alpha=150,max=255),YLIM=ac.ylim,XLIM=XLIM,yaxt="n",bty="n",hatched=F)#
-	axis(2,at=seq(0,8,2),label=T,las=1,cex.axis=1.4)#
-	axis(4,at=seq(0,8,2),label=F,las=1,cex.axis=1.4)#
-	axis(3,at=axis.ticks,labels=F)#
-	mtext("ACs",2,2.75,cex=1.2)#
-	plot.ts(sqsk,bin.means.sub,YLAB="",new=F,add=F,line.col=rgb(sqs.rgb[1],sqs.rgb[2],sqs.rgb[3],max=255),poly.col=rgb(sqs.rgb[1],sqs.rgb[2],sqs.rgb[3],alpha=150,max=255),YLIM=sqs.ylim,XLIM=XLIM,yaxt="n",bty="n",hatched=F)#
-	axis(2,at=seq(0,10,2),labels=T,las=1,cex.axis=1.4)#
-	axis(4,at=seq(0,10,2),labels=F,las=1,cex.axis=1.4)#
-	mtext("SQS",2,2.75,cex=1.2)#
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.6)
+100-12
+null<-c(0.12,0.88,0.12,0.88)#
+alt<-c(0,100,0.12,0.88)#
 #
-plot.ts(lossk,bin.means.sub,YLAB="",new=F,add=F,line.col=rgb(loss.rgb[1],loss.rgb[2],loss.rgb[3],max=255),poly.col=rgb(loss.rgb[1],loss.rgb[2],loss.rgb[3],alpha=150,max=255),XLIM=XLIM,YLIM=lossgain.ylim,xaxt="n",yaxt="n",bty="n",hatched=F)#
-	# axis(2,label=F,at=seq(0,0.2,0.1),las=1,las=1,cex.axis=1.4)#
-	axis(2,label=T,at=seq(0,5,1),las=1,cex.axis=1.4)#
-	axis(4,label=F,at=seq(0,5,1),las=1)#
-	plot.ts(gaink,bin.means.sub,YLAB="",new=F,add=T,line.col=rgb(gain.rgb[1],gain.rgb[2],gain.rgb[3],max=255),poly.col=rgb(gain.rgb[1],gain.rgb[2],gain.rgb[3],alpha=175,max=255),XLIM=XLIM,hatched=F)#
-	mtext("Gain/Loss",2,2.75,cex=1.2)#
-	# legend("topleft",c("Gain","Loss"),col=c(rgb(gain.rgb[1],gain.rgb[2],gain.rgb[3],alpha=125,max=255),rgb(loss.rgb[1],loss.rgb[2],loss.rgb[3],alpha=175,max=255)),pch=15,bty="n",cex=1.5)#
-	plot.ts(fadk,bin.means.sub,YLAB="",new=F,add=F,line.col=rgb(fad.rgb[1],fad.rgb[2],fad.rgb[3],max=255),poly.col=rgb(fad.rgb[1],fad.rgb[2],fad.rgb[3],alpha=150,max=255),YLIM=flad.ylim,XLIM=XLIM,xaxt="n",yaxt="n",bty="n",hatched=T,angle=35)#
+pwr.chisq.test(w = ES.h(p1=0.2, p2=0.1875), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+null<-c(0.12,0.88,0.12,0.88)#
+alt<-c(0,1,0.12,0.88)#
 #
-	axis(2,at=seq(0,6,2),las=1,cex.axis=1.4)#
-	axis(4,at=seq(0,6,2),labels=F,las=1,cex.axis=1.4)#
-	axis(1,at=seq(12000,0,-4000),cex.axis=1.4)#
-	axis(1,at=seq(14000,0,-1000), label=F)#
-	plot.ts(ladk,bin.means.sub,YLAB="",new=F,add=T,line.col=rgb(lad.rgb[1],lad.rgb[2],lad.rgb[3],max=255),poly.col=rgb(lad.rgb[1],lad.rgb[2],lad.rgb[3],alpha=125,max=255),XLIM=XLIM,hatched=T,angle=-75)#
-	mtext("FAD/LAD",2,2.75,cex=1.2)#
-	# legend("topleft",c("FAD","LAD"),col=c(rgb(fad.rgb[1],fad.rgb[2],fad.rgb[3],alpha=150,max=255),rgb(lad.rgb[1],lad.rgb[2],lad.rgb[3],alpha=125,max=255)),pch=15,bty="n",cex=1.5)#
-	mtext("Cal YBP",1,2.5)#
-	mtext(reg.id[i],3,2,cex=1.4,outer=T)#
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+?ES.w1
+1-0.01875
+null<-c(0.98,0.98,0.02,0.02)#
+alt<-c(0.98,0.98125,0.02,0.01875)
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+null<-c(0.98,0.02,0.98,0.02)#
+alt<-c(0.98,0.02,0.98125,0.01875)#
+# alt<-c(0.1,0.9,0.2,0.8)#
 #
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+alt<-c(0.98,0.99,0.02,0.01)
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+null<-c(0.98,0.98,0.02,0.02)
+alt<-c(0.98,0.99,0.02,0.01)
+pwr.chisq.test(w = ES.w1(null,alt), df = 1, sig.level = 0.05, power = 0.8)
+ES.w1(null,alt1)
+alt1<-c(0.98,0.98125,0.02,0.01875)#
+alt2<-c(0.98,0.99,0.02,0.01)
+ES.w1(null,alt1)
+ES.w1(null,alt2)
+2/12
+10/12
+h<-ES.h(0.5,0.4)
+h
+ES.h(0.02,0.01875)
+alt1<-c(0.98,0.98125,0.02,0.01875)
+ES.w1(null,alt1)
+pwr.chisq.test(w = ES.h(p1=0.2, p2=0.1875), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.h(p1=0.02, p2=0.01875), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.w1(null,alt1), df = 1, sig.level = 0.05, power = 0.8)
+?ES.w1
+?pwr.chisq.test
+citation (pwr)
+citation(pwr)
+citation("pwr")
+citation()
+?ES.w1
+null<-c(0.98,0.98,0.02,0.02)#
+alt1<-c(0.98,0.98125,0.02,0.01875)#
+alt2<-c(0.98,0.99,0.02,0.01)
+ES.w1(null,alt1)
+pwr.chisq.test(w = ES.w1(null,alt1), df = 1, sig.level = 0.05, power = 0.6)
+pwr.chisq.test(w = ES.w1(null,alt1), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.w1(null,alt1), df = 1, sig.level = 0.05, power = 0.6)
+alt2<-c(0.98,0.99,0.02,0.01)#
+#
+pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = 0.6)
+pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = pwrs[i])
+pwrs<-seq(0.5,1,0.1)
+i=1
+pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = pwrs[i])
+pwr.tst
+names(pwr.test)
+names(pwr.tst)
+pwrs<-seq(0.5,1,0.1)#
+ns<-c()#
+for (i in 1:length(pwrs)){#
+	pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = pwrs[i])#
+	ns[i]<-pwr.tst$N#
 }
-# LOAD DATA ########################################
-# Load age models___#
-# Bayesian age models used here are from Wang et al. (2019) Bayesian ages for pollen records since the last glaciation. Sci Data 6, 176#
-# code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma#
-# Age models here are provided with permission from Y. Wang#
-#
-wang.cores.meta<-read.csv("SiteInfo_allsites.csv")#
-path<-"Wang-et-al-Cores"#
-#
-# GET DATA ########################################
-# set criteria for including sites based on sample number, resolution, etc.#
-#
-# limit to sites with Wang et al. 2019 bacon age models#
-min.samp<-20 # minimum number of samples in time series, regardless of resolution#
-max.resolution<-250 # mean resolution (# samples/time must be this value or lower)#
-prop.length.cutoff<-0.1 # sites with hiatuses longer that this proportion will be flagged and info about time segments before and after each hiatus will be collected#
-min.amt.time<-2000 # total minimum duration for the entire time series. #
-#
-full.cores<-wang.cores.meta[wang.cores.meta$AgeModel_completeness %in% "full",] # age models for sites where the full dataset was modeled#
-part.cores<-wang.cores.meta[wang.cores.meta$AgeModel_completeness %in% "part",] # age models for sites where only part of the dataset was modeled#
-#
-# get datasets for cores with full age models_____#
-handles<-as.vector(full.cores$handle)#
-#
-keepers<-c()#
-for (i in 1:length(handles)){#
-	# print(i)#
-	handlei<-handles[i] # get site handle#
-	handle.path<-paste(path,"/",handlei,sep="") #
-	am.file<-dir(handle.path,pattern="ages.txt") #
-	am.path<-paste(handle.path,"/",am.file,sep="")#
-	am<-read.table(am.path,header=T)#
-	minage<-min(am$median,na.rm=T)#
-	maxage<-max(am$median,na.rm=T)	#
-	duration<-maxage-minage#
-	avg.res<-duration/nrow(am)#
-#
-	sampsize.test<-(nrow(am)>=min.samp) # sufficient sample size?#
-	dur.test<-(duration>=min.amt.time) # sufficient duration?#
-	res.test<-(avg.res<=min.amt.time) # sufficient resolution?#
-	if (sum(sampsize.test,dur.test,res.test)==3) {#
-		keepers[i]<-handlei#
-	} else {#
-		keepers[i]<-NA#
-	}	#
+plot(pwrs,ns)
+pwrs<-seq(0.5,0.9,0.1)#
+ns<-c()#
+for (i in 1:length(pwrs)){#
+	pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = pwrs[i])#
+	ns[i]<-pwr.tst$N#
 }#
 #
-keepers<-keepers[!is.na(keepers)]#
-#
-full.ds<-full.cores[full.cores$handle %in% keepers,c("datasetid","handle")]#
-#
-# get datasets for cores with partial age models_____#
-handles<-as.vector(part.cores$handle)#
-#
-keepers.p<-c()#
-for (i in 1:length(handles)){#
-	print(i)#
-	handlei<-handles[i] # get site handle#
-	handle.path<-paste(path,"/",handlei,sep="") #
-	am.file<-dir(handle.path,pattern="ages.txt") #
-	am.path<-paste(handle.path,"/",am.file,sep="")#
-	am<-read.table(am.path,header=T)#
-	minage<-min(am$median,na.rm=T)#
-	maxage<-max(am$median,na.rm=T)	#
-	duration<-maxage-minage#
-	avg.res<-duration/nrow(am)#
-#
-	sampsize.test<-(nrow(am)>=min.samp) # sufficient sample size?#
-	dur.test<-(duration>=min.amt.time) # sufficient duration?#
-	res.test<-(avg.res<=min.amt.time) # sufficient resolution?#
-	if (sum(sampsize.test,dur.test,res.test)==3) {#
-		keepers.p[i]<-handlei#
-	} else {#
-		keepers.p[i]<-NA#
-	}	#
+plot(pwrs,ns)
+plot(pwrs,ns,ylab="N",xlab="Power")
+plot(pwrs,ns,ylab="N",xlab="Power",pch=16)
+plot(pwrs,ns,ylab="N",xlab="Power",pch=16,las=1)
+pwrs<-seq(0.5,0.9,0.1)#
+ns_h1<-c()#
+for (i in 1:length(pwrs)){#
+	pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt1), df = 1, sig.level = 0.05, power = pwrs[i])#
+	ns[i]<-pwr.tst$N#
+}
+plot(pwrs,ns_h1,ylab="N",xlab="Power",pch=16,las=1)#
+points(pwrs,ns_h2)
+pwrs<-seq(0.5,0.9,0.1)#
+ns_h2<-c()#
+for (i in 1:length(pwrs)){#
+	pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = pwrs[i])#
+	ns[i]<-pwr.tst$N#
 }#
-#
-keepers.p<-keepers.p[!is.na(keepers.p)]#
-part.ds<-part.cores[part.cores$handle %in% keepers.p,c("datasetid","handle")]#
-#
-# combine full and partial cores list of dataset ids, and download_____#
-all.cores.ds<-c(full.ds[,1],part.ds[,1])
-all.cores.ds
-# LOAD DATA ########################################
-# LOAD NEOTOMA R OBJECT___#
-load('pol_dlx_2020-12-01.Rdata')#
-#
-# LOAD AGE MODELS___#
-# Bayesian age models used here are from Wang et al. (2019) Bayesian ages for pollen records since the last glaciation. Sci Data 6, 176#
-# code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma#
-# Age models here are provided with permission from Y. Wang#
-#
-path<-"Wang-et-al-Cores" # file path for age model data#
-#
-# LOAD FUNCTIONS ########################################
-source('PaleoVegChange_functions.R', chdir = TRUE)#
-#
-# ANALYSIS #########################################
-# DEFINE BINS#
-step<- -250#
-ageolder<-13950#
-bins<-seq(ageolder,step,step)#
-bin.means<-(bins[-length(bins)]+bins[-1])/2
-# test#
-iter.siteresamp=50#
-iter.amresamp=5 #
-N.sites<-10
-# CALCULATE ABRUPT CHANGES________________________________________#
-# per site______________________#
-# Using a Neotoma download object, run principle curve on the pollen from each site, and calculate BCP#
-eco.group<-c("TRSH","UPHE") # identify which ecological groups to include in pollen dataset#
-threshold<-0.5 # bcp posterior probability threshold#
-#
-multi.bcp<-list()#
-for (i in 1:length(pol_dlx)){#
-	print(i)#
-	pol_ds<-pol_dlx[[i]]#
-	am_posteriors<-get_am_posteriors(pol_ds)#
-	am_posteriors<-am_posteriors[complete.cases(am_posteriors),]#
-	prep.pol<-prep_pollen(pol_ds,eco.group,type="pct")#
-	# remove rows with NA pollen data#
-	na.inds<-complete.cases(prep.pol$prep.pol)#
-	prep.pol$prep.pol<-prep.pol$prep.pol[na.inds,]#
-	prep.pol$depth<-prep.pol$depth[na.inds]#
-	am_posteriors<-am_posteriors[na.inds,]#
-	multi.bcp[[i]]<-ac_agejigger(prep.pol,am_posteriors,iters=iter.amresamp,type="bcp",threshold)#
+pwrs<-seq(0.5,0.9,0.1)#
+ns_h1<-c()#
+for (i in 1:length(pwrs)){#
+	pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt1), df = 1, sig.level = 0.05, power = pwrs[i])#
+	ns[i]<-pwr.tst$N#
 }#
-#
-names(multi.bcp)<-names(pol_dlx)
-am.post<-read.csv("~/Desktop/Yue Cores/Cores_all/STEELMN/STEELMN_239_posteriorout.csv")
-am.quant<-read.table("~/Desktop/Yue Cores/Cores_all/STEELMN/STEELMN_239_ages.txt")
-am.quant
-?read.table
-am.quant<-read.table("~/Desktop/Yue Cores/Cores_all/STEELMN/STEELMN_239_ages.txt",header=T)
-am.quant
-plot(am.quant$depth,am.quant$median)
-plot(am.quant$median,am.quant$depth,type="l")
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(14000,1500),ylim=c(200,1100))
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(14000,1500),ylim=c(200,1100),ylab="Depth (cm)",xlab="Cal YBP")
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)))
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=F,col="lightblue")
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border="n",col="lightblue")
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(14000,1500),ylim=c(200,1100),ylab="Depth (cm)",xlab="Cal YBP")
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border="n",col="lightblue")
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col="lightblue")
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.5,0,1))
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.2,0.2,1))
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.2,1))
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.4,1))
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.8,0.4,1))
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))
-lines(am.quant$median,am.quant$depth)
-sample(c(1:ncol(am.post)),5)
-lines(am.post[,am.runs[i]],am.quant$depth,col="gray")
-am.runs<-sample(c(1:ncol(am.post)),5)#
-#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,col="gray")#
-}
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(200,1100),ylab="Depth (cm)",xlab="Cal YBP")
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))
-lines(am.quant$median,am.quant$depth)
-lines(am.post[,am.runs],am.quant$depth,lty=2,lwd=0.5)
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=2,lwd=0.5)#
-}
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(250,1100),ylab="Depth (cm)",xlab="Cal YBP")
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=2,lwd=0.5)#
-}
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(250,1100),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=3,lwd=0.5)#
-}
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(250,1100),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=3,lwd=0.75)#
-}
-# Plot age model example_____#
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(260,1050),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=3,lwd=0.75)#
-}
-# Plot age model example_____#
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(260,1030),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=3,lwd=0.75)#
-}
-# Plot age model example_____#
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(260,1070),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=3,lwd=0.75)#
-}
-# Plot age model example_____#
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=3,lwd=0.75)#
-}
-# Plot age model example_____#
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth,lwd=0.5)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=3,lwd=0.75)#
-}
-# Plot age model example_____#
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-lines(am.quant$median,am.quant$depth,lwd=0.5)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.75)#
-}
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-# lines(am.quant$median,am.quant$depth,lwd=0.5)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
-}
-legend("topleft",c("95% Confidence Interval","Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"))
-legend("topleft",c("95% Confidence Interval","Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),lwd=1)
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-# lines(am.quant$median,am.quant$depth,lwd=0.5)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
+plot(pwrs,ns_h1,ylab="N",xlab="Power",pch=16,las=1)#
+points(pwrs,ns_h2)
+plot(pwrs,ns_h1,ylab="N",xlab="Power",pch=16,las=1)
+pwrs<-seq(0.5,0.9,0.1)#
+ns_h2<-c()#
+for (i in 1:length(pwrs)){#
+	pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt2), df = 1, sig.level = 0.05, power = pwrs[i])#
+	ns_h2[i]<-pwr.tst$N#
 }#
-#
-legend("topleft",c("95% Confidence Interval","Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),pch=c(15,"-"))
-legend("topleft",c("95% Confidence Interval","Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),pch=15)
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-# lines(am.quant$median,am.quant$depth,lwd=0.5)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
+pwrs<-seq(0.5,0.9,0.1)#
+ns_h1<-c()#
+for (i in 1:length(pwrs)){#
+	pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt1), df = 1, sig.level = 0.05, power = pwrs[i])#
+	ns_h1[i]<-pwr.tst$N#
 }#
+plot(pwrs,ns_h1,ylab="N",xlab="Power",pch=16,las=1)#
+points(pwrs,ns_h2)
+ns_h2
+plot(pwrs,ns_h1,ylab="N",xlab="Power",pch=16,las=1,ylimc=c(0,130000))#
+points(pwrs,ns_h2)
+plot(pwrs,ns_h1,ylab="N",xlab="Power",pch=16,las=1,ylim=c(0,130000))#
+points(pwrs,ns_h2)
+plot(pwrs,ns_h2,ylab="N",xlab="Power",pch=16,las=1)
+plot(pwrs,ns_h1,ylab="N",xlab="Power",pch=16,las=1,ylim=c(0,130000))
+plot(pwrs,ns_h2,ylab="N",xlab="Power",pch=16,las=1)
+alt3<-c(0.98,1,0.02,0)
+pwr.chisq.test(w = ES.w1(null,alt3), df = 1, sig.level = 0.05, power = 0.8)
+pwr.chisq.test(w = ES.w1(null,alt3), df = 1, sig.level = 0.05, power = 0.6)
+alt3<-c(0.98,1,0.02,0)#
 #
-legend("topleft",c("95% Confidence Interval","Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),pch=15)
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
+pwr.chisq.test(w = ES.w1(null,alt3), df = 1, sig.level = 0.05, power = 0.8)
+pwrs<-seq(0.5,0.9,0.1)#
+ns_h3<-c()#
+for (i in 1:length(pwrs)){#
+	pwr.tst<-pwr.chisq.test(w = ES.w1(null,alt3), df = 1, sig.level = 0.05, power = pwrs[i])#
+	ns_h3[i]<-pwr.tst$N#
+}
+plot(pwrs,ns_h3,ylab="N",xlab="Power",pch=16,las=1,ylim=c(0,130000))
+plot(pwrs,ns_h3,ylab="N",xlab="Power",pch=16,las=1)
+sum(alt3)
+sum(alt2)
+sum(alt1)
+sum(null)
+alt3<-c(0.98,1,0.02,0)
+pwr.chisq.test(w = ES.w1(null,alt3), df = 1, sig.level = 0.05, power = 0.8)
+ES.w1(null,alt3)
+ES.w1(null,alt2)
+pwr.chisq.test(w = ES.w1(null,alt3), df = 1, sig.level = 0.05, power = 0.8)
+# LIBRARIES#
 #
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-# lines(am.quant$median,am.quant$depth,lwd=0.5)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
-}#
+library(rioja)#
+library(princurve)#
+library(bcp)#
 #
-legend("topleft",c("95% Confidence Interval","Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),pch=15,bty="n")
-legend("topleft",c("95% Confidence Interval","Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),lwd=1,bty="n")
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
+# FUNCTIONS#
+source('~/Desktop/Research_Git/PaleoVegChange/PaleoVegChange_functions.R', chdir = TRUE)#
 #
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-# lines(am.quant$median,am.quant$depth,lwd=0.5)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
-}#
-#
-legend("topleft",c("95% Confidence Interval","Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),lwd=1,bty="n")
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-# lines(am.quant$median,am.quant$depth,lwd=0.5)#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
-}#
-#
-legend("topleft",c("95% Confidence Interval","example Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),lwd=1,bty="n")
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.6,0.8))#
-#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
-}#
-#
-legend("topleft",c("95% Confidence Interval","example Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),lwd=1,bty="n")
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.5,0.6,1))#
-#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
-}#
-#
-legend("topleft",c("95% Confidence Interval","example Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),lwd=1,bty="n")
-# Plot age model example_____#
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.5,1))#
-#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
-}#
-#
-legend("topleft",c("95% Confidence Interval","example Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),lwd=1,bty="n")
-# Plot age model example_____#
-plot(am.quant$median,am.quant$depth,type="l",xlim=c(15000,1500),ylim=c(1070,260),ylab="Depth (cm)",xlab="Cal YBP")#
-#
-polygon(c(am.quant$min,rev(am.quant$max)),c(am.quant$depth,rev(am.quant$depth)),border=NA,col=rgb(0.1,0.8,1))#
-#
-am.runs<-sample(c(1:ncol(am.post)),5)#
-#
-for (i in 1:length(am.runs)){#
-	lines(am.post[,am.runs[i]],am.quant$depth,lty=1,lwd=0.5)#
-}#
-#
-legend("topleft",c("95% Confidence Interval","example Bayesian age model run"),col=c(rgb(0.1,0.8,1),"black"),lwd=1,bty="n")
+# NEOTOMA DOWNLOAD OBJECT#
 load('~/Desktop/Research_Git/PaleoVegChange/pol_dlx_2020-12-01.Rdata')
-which(names(pol_dlx == "17396"))
-which(names(pol_dlx) == "17396")
-sl.id<-which(names(pol_dlx) == "17396")
-pol_dlx[sl.id]
-pol_dlx[[sl.id]]
-pol_dlx[[sl.id]]$counts
-sl.pol.cnts<-pol_dlx[[sl.id]]$counts
-dim(sl.pol.cnts)
-sl.pol.cnts/rowSums(sl.pol.cnts)
-sl.pol.pcts<-sl.pol.cnts/rowSums(sl.pol.cnts)
-colSums(sl.pol.pcts)
-order(colSums(sl.pol.pcts))
-sort(colSums(sl.pol.pcts))
-sort(colSums(sl.pol.pcts),decreasing=T)
-order(colSums(sl.pol.pcts),decreasing=T)
-pol.rank<-order(colSums(sl.pol.pcts),decreasing=T)
-pol.rank[1"12"]
-pol.rank[1:12]
-sl.pol.pcts[,pol.rank[1:12]]
-pol.sub<-sl.pol.pcts[,pol.rank[1:12]]
-rioja::stratiplot(pol.sub)
-rioja::Stratiplot(pol.sub)
-library(rioja)
-strat.plot(pol.sub)
-par(oma=c(1,1,6,1))
-strat.plot(pol.sub)
-par(oma=c(1,1,8,1))
-strat.plot(pol.sub)
-library(princurve)
-pc<-principal_curve(sqrt(sl.pol.pcts))
-plot(pc$lambda)
-pol_dlx[[sl.id]]$counts
-names(pol_dlx[[sl.id]])
-names(pol_dlx[[sl.id]]$sample.meta)
-plot(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth)
-plot(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0))
-plot(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,type="l",ylim=c(1200,0))
-plot(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0))
-points(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,pch=15)
-plot(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0))#
-points(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,pch=16)
-plot(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab="Depth (cm)",xlab="Principal Curve Lambda")
-points(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,pch=16)
-bcp.out<-bcp(pc$lambda,mcmc=10000,burnin=1000,w0=0.2,p0=0.05) # run bcp
-names(bcp.out)
-bcp.out$posterior.prob
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab="Depth (cm)")
-plot(bcp.out$blocks,pol_dlx[[sl.id]]$sample.meta$depth)
-plot(bcp.out$mcmc.means,pol_dlx[[sl.id]]$sample.meta$depth)
-plot(bcp.out$posterior.means,pol_dlx[[sl.id]]$sample.meta$depth)
-bcp.out$posterior.means
-names(bcp.out)
-bcp.out$data
-bcp.out$blocks
-names(bcp.out)
-bcp.out
-summary(bcp.out)
-bcp.out.summary<-summary(bcp.out)
-bcp.out.summary[,1]
-plot(bcp.out.summary[,1])
-plot(bcp.out.summary[,2])
-plot(bcp.out$data)
-lines(bcp.out.summary[,2])
-plot(bcp.out$data,pol_dlx[[sl.id]]$sample.meta$depth)
-length(pol_dlx[[sl.id]]$sample.meta$depth)
-length(bcp.out$data)
-bcp.out$data
-length(bcp.out$data[,2])
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth)
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0))
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16)
-lines(bcp.out$posterior.means,pol_dlx[[sl.id]]$sample.meta$depth,col="red")
-bcp.out$posterior.means
-plot(bcp.out$data)
-lines(bcp.out.summary[,2])
-length(bcp.out.summary[,2])
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16)#
+# sl.id<-which(names(pol_dlx) == "17396") # steel lake#
+# sl.id<-which(names(pol_dlx) == "2576")	# slough creek ##
+# sl.id<-which(names(pol_dlx) == "14803") # burnt knob lake ##
+# sl.id<-which(names(pol_dlx) == "14933") # nelson lake#
+# sl.id<-which(names(pol_dlx) == "14997") # round pond #
+# sl.id<-which(names(pol_dlx) == "203") # anderson pond ####
+# sl.id<-which(names(pol_dlx) == "15088") # anderson pond ####
+# sl.id<-which(names(pol_dlx) == "20397") # south rhody ####
 #
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab="Depth (cm)")
-par(mfrow=c(1,2))#
+sl.id<-which(names(pol_dlx) == "971") # Gould pond#
 #
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16)#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
+sl.pol.cnts<-pol_dlx[[sl.id]]$counts#
 #
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab="Depth (cm)",yaxt="n")
-plot(bcp.out)
-par(mfrow=c(1,2))#
+sl.pol.pcts<-clean_pollen(pol_dlx[[sl.id]],type="pct",eco.grou=c("TRSH","UPHE"))#
 #
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16,ylab="Depth (cm)",xlab="Posterior Means")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
+# sl.pol.pcts<-sl.pol.cnts/rowSums(sl.pol.cnts)#
+# sort(colSums(sl.pol.pcts),decreasing=T)#
 #
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab=" ",yaxt="n",xlab="Posterior Probability")
-par(mfrow=c(1,2),oma=c())#
+pol.rank<-order(colSums(sl.pol.pcts),decreasing=T)#
+pol.sub<-sl.pol.pcts[,pol.rank[1:12]]#
 #
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16,cex.0.5,ylab="Depth (cm)",xlab="Posterior Means")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
+# Run principal curve#
+pc<-principal_curve(sqrt(sl.pol.pcts))#
 #
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab=" ",yaxt="n",xlab="Posterior Probability")
-par(mfrow=c(1,2),mar=c(4,1,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab=" ",yaxt="n",xlab="Posterior Probability")
-par(mfrow=c(1,2),mar=c(4,1,1,1),oma=c(3,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab=" ",yaxt="n",xlab="Posterior Probability")
-par(mfrow=c(1,2),mar=c(4,1,1,1),oma=c(2,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1)#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab=" ",yaxt="n",xlab="Posterior Probability")
-par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(2,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1)#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab=" ",yaxt="n",xlab="Posterior Probability")
-mtext("Depth (cm)",2,3)
-par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(2,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1)#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-mtext("Depth (cm)",2,3)#
-#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab=" ",yaxt="n",xlab="Posterior Probability")
-pc$lambda
-par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(2,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1200,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1,col="red")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-mtext("Depth (cm)",2,3)#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab=" ",yaxt="n",xlab="Posterior Probability")
-abline(v=0.5,lty=3)
-par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(2,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1150,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1,col="red")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-mtext("Depth (cm)",2,3)#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1150,0),ylab=" ",yaxt="n",xlab="Posterior Probability")#
-abline(v=0.5,lty=3)
-par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(2,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1170,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1,col="red")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-mtext("Depth (cm)",2,3)#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1170,0),ylab=" ",yaxt="n",xlab="Posterior Probability")#
-abline(v=0.5,lty=3)
 # plot pollen diagram#
-par(oma=c(1,1,8,1))#
-strat.plot(pol.sub)
-# plot pollen diagram#
-dev.new(width=8,height=6)#
-par(oma=c(1,1,8,1))#
-strat.plot(pol.sub)
-# plot pollen diagram#
-dev.new(width=10,height=6)#
-par(oma=c(1,1,8,1))#
-strat.plot(pol.sub)
-?strat.plot
-# plot pollen diagram#
-dev.new(width=10,height=6)#
-par(oma=c(1,1,8,1))#
-strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth)
-strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T)
-plot(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1200,0),ylab="Depth (cm)",xlab="Principal Curve Lambda")#
-points(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,pch=16)
-dev.new(width=10,height=6)#
-par(oma=c(1,1,8,1))#
-strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T)
-strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(1170,0))
-strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))
-cbind(pol.sub,pc$lambda)
-temp<-cbind(pol.sub,pc$lambda)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))
-?strat.plot
-plot.poly=T,plot.line=T)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T)
-colnames(temp)[13]<-"PC Lambda"
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,col.poly=c(rep("gray40",12),rgb(0,0,0)))
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,col.poly=c(rep("gray40",12),rgb(0,0,0,0)))
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)))
-pc$lambda
-pc$lambda<0
-colnames(temp)[13]<-"Principal Curve Lambda"
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)))
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),scale.percent=T)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)))
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0))
-mtext("Depth (cm)",2,4,outer=T)
-mtext("Depth (cm)",2,2,outer=T)
-mtext("Depth (cm)",2,1,outer=T)
-mtext("Depth (cm)",2,1,outer=F)
-mtext("Depth (cm)",2,3,outer=F)
-mtext("Depth (cm)",2,3.5,outer=F)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0))#
 #
-mtext("Depth (cm)",2,3.5,outer=F)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.axis=1)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.axis=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.lab=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.title=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.ylabel=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.yaxis=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,cex.xaxis=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=.45,cex.xaxis=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.xaxis=0.5)
-par(oma=c(1,1,8,3))
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.xaxis=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.5)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65)
 temp<-cbind(pol.sub*100,pc$lambda)#
-colnames(temp)[13]<-"Principal Curve Lambda"#
+colnames(temp)[13]<-"Principal Curve"#
+#
+YLIM<-c(2200,750)#
 dev.new(width=10,height=6)#
-par(oma=c(1,1,8,3))#
-# strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))#
-#
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65)#
-#
-mtext("Depth (cm)",2,3.5,outer=F)
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)
-temp<-cbind(pol.sub*100,pc$lambda+0.1)
-temp<-cbind(pol.sub*100,pc$lambda+0.1)#
-colnames(temp)[13]<-"Principal Curve Lambda"
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)#
-#
-mtext("Depth (cm)",2,3.5,outer=F)
-temp<-cbind(pol.sub*100,pc$lambda+0.2)#
-colnames(temp)[13]<-"Principal Curve Lambda"#
-# dev.new(width=10,height=6)#
-par(oma=c(1,1,8,3))#
-# strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))#
-#
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)#
-#
-mtext("Depth (cm)",2,3.5,outer=F)
-temp<-cbind(pol.sub*100,pc$lambda+0.5)#
-colnames(temp)[13]<-"Principal Curve Lambda"#
-# dev.new(width=10,height=6)#
-par(oma=c(1,1,8,3))#
-# strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))#
-#
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)#
-#
-mtext("Depth (cm)",2,3.5,outer=F)
-temp<-cbind(pol.sub*100,pc$lambda)#
-colnames(temp)[13]<-"Principal Curve Lambda"#
-# dev.new(width=10,height=6)#
-par(oma=c(1,1,8,3))#
-# strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))#
-#
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)#
-#
-mtext("Depth (cm)",2,3.5,outer=F)
-# dev.new(width=10,height=6)#
-par(oma=c(1,1,6,3))#
-# strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))#
-#
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)#
-#
-mtext("Depth (cm)",2,3.5,outer=F)
-# dev.new(width=10,height=6)#
-par(oma=c(1,1,4,3))#
-# strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))#
-#
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)#
-#
-mtext("Depth (cm)",2,3.5,outer=F)
-# dev.new(width=10,height=6)#
 par(oma=c(1,1,2,3))#
 # strat.plot(pol.sub,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200))#
 #
-strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=c(0,1200),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)#
+strat.plot(temp,yvar=pol_dlx[[sl.id]]$sample.meta$depth,y.rev=T,ylim=rev(YLIM),plot.poly=T,plot.line=T,plot.bar=F,col.poly=c(rep("gray40",12),rgb(0,0,0,0)),col.poly.line=rgb(0,0,0,0),cex.xlabel=0.75,srt.xlabel=45,cex.axis=0.65,tcl=-0.25)#
 #
-mtext("Depth (cm)",2,3.5,outer=F)
-par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(2,4,1,1))#
+mtext("Depth (cm)",2,3.5,outer=F)#
 #
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1170,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1,col="red")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-mtext("Depth (cm)",2,3)#
-#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1170,0),ylab=" ",yaxt="n",xlab="Posterior Probability")#
-# abline(v=0.5,lty=3)
-dev.new(width=4,height=6)#
-par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(2,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1170,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1,col="red")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-mtext("Depth (cm)",2,3)#
-#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1170,0),ylab=" ",yaxt="n",xlab="Posterior Probability")#
-# abline(v=0.5,lty=3)
-par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(1,4,1,1))#
-#
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1170,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1,col="red")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
-mtext("Depth (cm)",2,3)#
-#
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1170,0),ylab=" ",yaxt="n",xlab="Posterior Probability")#
-# abline(v=0.5,lty=3)
+# # plot Principle curve#
+# plot(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=YLIM,ylab="Depth (cm)",xlab="Principal Curve Lambda")#
+# points(pc$lambda,pol_dlx[[sl.id]]$sample.meta$depth,pch=16)#
+# plot BCP#
+bcp.out<-bcp(pc$lambda,mcmc=10000,burnin=1000,w0=0.2,p0=0.05) # run bcp#
+bcp.out.summary<-summary(bcp.out)#
 dev.new(width=4.5,height=6)#
 par(mfrow=c(1,2),mar=c(4,1,1,0),oma=c(1,4,1,1))#
 #
-plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=c(1170,0),pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1,col="red")#
-lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="red")#
+plot(bcp.out$data[,2],pol_dlx[[sl.id]]$sample.meta$depth,ylim=YLIM,pch=16,cex=0.5,ylab="Depth (cm)",xlab="Posterior Means",las=1,col="blue")#
+lines(bcp.out.summary[,2],pol_dlx[[sl.id]]$sample.meta$depth,col="blue")#
 mtext("Depth (cm)",2,3)#
+abline(h=pol_dlx[[sl.id]]$sample.meta$depth[which(bcp.out$posterior.prob>0.5)],lty=3,col="red")#
 #
-plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=c(1170,0),ylab=" ",yaxt="n",xlab="Posterior Probability")#
+plot(bcp.out$posterior.prob,pol_dlx[[sl.id]]$sample.meta$depth,type="l",lwd=0.5,ylim=YLIM,ylab=" ",yaxt="n",xlab="Posterior Probability")#
 # abline(v=0.5,lty=3)
-##################################################
-# Code to analyze bidoversity and community change in pollen datasets from the Neotoma database in regional subsets#
-# Copyright: 2023 M. Allison Stegner#
-##################################################
+citation("princuve")
+citation("princurve")
+3854+2036
+ddt<-read.csv("~/Desktop/Research_Git/JRBP_Cores/pesticides/JRBP2018-VC01A_DDT.csv")
+am<-read.csv("~/Desktop/Research_Git/JRBP_Cores/CT Ti Age model/JRBP2018-VC01A_AgeModel_2022-06-17.csv")
+# LOAD DATA#
+ddt<-read.csv("~/Desktop/Research_Git/JRBP_Cores/pesticides/JRBP2018-VC01A_DDT.csv")#
 #
+am<-read.csv("~/Desktop/Research_Git/JRBP_Cores/CT Ti Age model/JRBP2018-VC01A_AgeModel_2022-06-17.csv")
+head(ddt)
+head(am)
+samp_top_interp_upper<-approx(am$Depth..cm.,am$Upper.Age.Est,xout=ddt$Upper.Depth)#
+samp_top_interp_median<-approx(am$Depth..cm.,am$Age.Est,xout=ddt$Upper.Depth)#
+samp_top_interp_lower<-approx(am$Depth..cm.,am$Lower.Age.Est,xout=ddt$Upper.Depth)#
+#
+samp_base_interp_upper<-approx(am$Depth..cm.,am$Upper.Age.Est,xout=ddt$Lower.Depth)#
+samp_base_interp_median<-approx(am$Depth..cm.,am$Age.Est,xout=ddt$Lower.Depth)#
+samp_base_interp_lower<-approx(am$Depth..cm.,am$Lower.Age.Est,xout=ddt$Lower.Depth)
+cbind(ddt$Upper.Depth,samp_top_interp_lower$y,samp_top_interp_median$y,samp_top_interp_upper$y)
+samp.top.am<-cbind(ddt$Upper.Depth,samp_top_interp_lower$y,samp_top_interp_median$y,samp_top_interp_upper$y)#
+#
+samp.base.am<-cbind(ddt$Upper.Depth,samp_base_interp_lower$y,samp_base_interp_median$y,samp_base_interp_upper$y)
+samp.mean.age<-(samp.top.am[,3]+samp.base.am[,3])/2
+samp.mean.age
+samp.mean.depth<-c(ddt$Lower.Depth+ddt$Upper.Depth)/2
+samp.mean.depth
+am.mean<-cbind(samp.mean.depth,samp.mean.age)
+am.mean
+am.mean[1,2]<-2019
+am.mean
+head(ddt)
+plot(am.mean[,2],ddt$Total.DDx)
+plot(am.mean[,2],ddt$Total.DDx,type="l")
+age.range<-cbind(ddt$Upper.Depth,ddt$Lower.Depth,samp.upper.est,samp.lower.est)
+# find age upper/lower for each sample#
+samp.upper.est<-samp.top.am[,4]#
+samp.lower.est<-samp.base.am[,2]#
+#
+age.range<-cbind(ddt$Upper.Depth,ddt$Lower.Depth,samp.upper.est,samp.lower.est)
+head(age.range)
+colnames(age.range)<-c("upper.depth","lower.depth","upper.age.est","lower.age.est")
+head(age.range)
+segments(x0=ddt$Total.DDx,x1=ddt$Total.DDx,y0=samp.upper.est,y1=samp.lower.est)
+plot(ddt$Total.DDx,am.mean[,2],type="l")#
+segments(x0=ddt$Total.DDx,x1=ddt$Total.DDx,y0=samp.upper.est,y1=samp.lower.est)
+plot(ddt$Total.DDx,am.mean[,2],type="l",lwd=0.5)#
+segments(x0=ddt$Total.DDx,x1=ddt$Total.DDx,y0=samp.upper.est,y1=samp.lower.est)
+plot(ddt$Total.DDx,am.mean[,2],type="l",lwd=0.5,main="DDx")
+segments(x0=ddt$Total.DDx,x1=ddt$Total.DDx,y0=samp.upper.est,y1=samp.lower.est)
+head(ddt)
+plot(ddt$DDD,am.mean[,2],type="l",lwd=0.5,main="Total DDD")#
+segments(x0=ddt$DDD,x1=ddt$DDD,y0=samp.upper.est,y1=samp.lower.est)
+# plot DDT data#
+plot(ddt$Total.DDx,am.mean[,2],type="l",lwd=0.5,main="Total DDx")#
+segments(x0=ddt$Total.DDx,x1=ddt$Total.DDx,y0=samp.upper.est,y1=samp.lower.est)
+plot(ddt$DDE,am.mean[,2],type="l",lwd=0.5,main="Total DDE")#
+segments(x0=ddt$DDE,x1=ddt$DDE,y0=samp.upper.est,y1=samp.lower.est)
+plot(ddt$DDT,am.mean[,2],type="l",lwd=0.5,main="Total DDT")#
+segments(x0=ddt$DDT,x1=ddt$DDT,y0=samp.upper.est,y1=samp.lower.est)
+sum(ddt$X24DDT,ddt$X44DDT)
+rowSums(ddt$X24DDT,ddt$X44DDT
+)
+plot(rowSums(ddt[,c("X24DDT","X$4DDT")]),am.mean[,2],type="l",lwd=0.5,main="Total DDT")
+plot(rowSums(ddt[,c("X24DDT","X44DDT")]),am.mean[,2],type="l",lwd=0.5,main="Total DDT")
+segments(x0=rowSums(ddt[,c("X24DDT","X44DDT")]),x1=rowSums(ddt[,c("X24DDT","X44DDT")]),y0=samp.upper.est,y1=samp.lower.est)
+plot(ddt$Total.DDx,am.mean[,2],type="l",lwd=0.5,main="Total DDx")
+polygon(x=c(rep(0,length(ddt$Total.DDx)),rev(ddt$Total.DDx)),y=c(am.mean[,2],rev(am.mean[,2])),col="blue")
+polygon(x=c(rep(0,length(ddt$Total.DDx)),rev(ddt$Total.DDx)),y=c(am.mean[,2],rev(am.mean[,2])),col="red")
+cbind(ddt$DDE,ddt$DDD)
+plot(rowSums(ddt[,c("X24DDT","X44DDT")]),am.mean[,2],type="l",lwd=0.5,main="Total DDT")#
+segments(x0=rowSums(ddt[,c("X24DDT","X44DDT")]),x1=rowSums(ddt[,c("X24DDT","X44DDT")]),y0=samp.upper.est,y1=samp.lower.est)
+plot(ddt$Total.DDx,am.mean[,2],type="l",lwd=0.5,main="Total DDx")#
+#
+polygon(x=c(rep(0,length(ddt$Total.DDx)),rev(ddt$Total.DDx)),y=c(am.mean[,2],rev(am.mean[,2])),col="red")
+polygon(x=c(rep(0,length(ddt$Total.DDx)),rev(rowSums(ddt[,c("DDE","DDD")]))),y=c(am.mean[,2],rev(am.mean[,2])),col="orange")
+polygon(x=c(rep(0,length(ddt$Total.DDx)),rev(ddt$Total.DDx)),y=c(am.mean[,2],rev(am.mean[,2])),col="red")
+polygon(x=c(rep(0,length(ddt$Total.DDx)),rev(rowSums(ddt[,c("DDE","DDD")]))),y=c(am.mean[,2],rev(am.mean[,2])),col="orange")
+polygon(x=c(rep(0,length(ddt$Total.DDx)),rev(rowSums(ddt[,c("DDD")]))),y=c(am.mean[,2],rev(am.mean[,2])),col="yellow")
+polygon(x=c(rep(0,length(ddt$Total.DDx)),rev(ddt[,c("DDD")])),y=c(am.mean[,2],rev(am.mean[,2])),col="yellow")
+age.range
+max.timespan<-age.range[,3]-age.range[,4]
+samp.top.am
+timespan<-samp.top.am[,3]-samp.top.am[,4]
+timespan
+timespan<-samp.top.am[,3]-samp.base.am[,3]
+timespan
+plot(timespan,ddt$Total.DDx)
+plot(timespan,ddt$DDD)
+plot(timespan,ddt$DDE)
+i=1
+pol_ds<-pol_dlx[[i]]#
+	am_posteriors<-get_am_posteriors(pol_ds)#
+	am_posteriors<-am_posteriors[complete.cases(am_posteriors),]#
+	prep.pol<-prep_pollen(pol_ds,eco.group,type="pct")
 # LIBRARIES ########################################
 library(rgdal)#
 library(geosphere)#
@@ -777,8 +403,59 @@ load('pol_dlx_2020-12-01.Rdata')#
 # code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma#
 # Age models here are provided with permission from Y. Wang#
 #
-path<-"Wang-et-al-Cores" # file path for age model data#
+path<-"Wang-et-al-Cores" # file path for age model data
+source('PaleoVegChange_functions.R', chdir = TRUE)
+getwd()
+setwd("~/Desktop/Research_Git/PaleoVegChange")
+# LIBRARIES ########################################
+library(rgdal)#
+library(geosphere)#
 #
+# LOAD DATA ########################################
+# NEOTOMA R OBJECT___#
+load('pol_dlx_2020-12-01.Rdata')#
+#
+# LOAD AGE MODELS___#
+# Bayesian age models used here are from Wang et al. (2019) Bayesian ages for pollen records since the last glaciation. Sci Data 6, 176#
+# code to generate these age models is available at https://github.com/yuewangpaleo/BaconAgeNeotoma#
+# Age models here are provided with permission from Y. Wang#
+#
+path<-"Wang-et-al-Cores" # file path for age model data
+source('PaleoVegChange_functions.R', chdir = TRUE)
+pol_ds<-pol_dlx[[i]]#
+	am_posteriors<-get_am_posteriors(pol_ds)#
+	am_posteriors<-am_posteriors[complete.cases(am_posteriors),]
+path<-"~/Desktop/Yue Cores/Cores_all"
+pol_ds<-pol_dlx[[i]]#
+	am_posteriors<-get_am_posteriors(pol_ds)#
+	am_posteriors<-am_posteriors[complete.cases(am_posteriors),]
+am_posteriors[,1:10]
+file.name<-dir(handle.path,pattern="ages.txt") # use handle to import bacon iterations
+pol_ds<-pol_dlx[[i]]#
+	handlej<-pol_ds$dataset$dataset.meta$collection.handle # get site handle#
+	handle.path<-paste(path,"/",handlej,sep="") #
+	file.name<-dir(handle.path,pattern="ages.txt") # use handle to import bacon iterations#
+	file.path<-paste(handle.path,"/",file.name,sep="")
+file.path
+read.table(file.path)
+am_iters<-read.table(file.path,header=T)
+am_iters
+range(am$median)
+meta.out<-matrix(NA,nrow=nrow(site.meta),ncol=4)#
+for (i in 1:nrow(site.meta)){#
+	site.i<-pol_dlx[[site.meta$dataset.id[i]]]#
+	n.samp<-nrow(site.i$sample.meta) # number of samples#
+	# age.range<-round(range(site.i$sample.meta$age)) # time span#
+	n.terrestrial<-ncol(clean_pollen(site.i,type="pct",eco.group=c("TRSH","UPHE"))) # number of terrestrial pollen types#
+	pol_ds<-pol_dlx[[i]]#
+	handlej<-pol_ds$dataset$dataset.meta$collection.handle # get site handle#
+	handle.path<-paste(path,"/",handlej,sep="") #
+	file.name<-dir(handle.path,pattern="ages.txt") # use handle to import bacon iterations#
+	file.path<-paste(handle.path,"/",file.name,sep="")#
+	am<-read.table(file.path,header=T)#
+	age.range<-range(am$median)#
+	meta.out[i,]<-c(n.samp,n.terrestrial,age.range)#
+}
 # LOAD ECOREGIONS SHAPEFILE__#
 # Download the Level I Ecoregions of North America Shapefile available at:#
 # https://www.epa.gov/eco-research/ecoregions-north-america#
@@ -880,7 +557,138 @@ for (k in 1:nrow(site.coords)){#
 #
 site.meta<-cbind(site.coords[,1],site.names,site.coords[,2:3],ecoregs,rep(NA,nrow(site.coords)))#
 colnames(site.meta)<-c("dataset.id","site.name","long","lat","ecoregion","site.group")#
-site.meta<-as.data.frame(site.meta)
+site.meta<-as.data.frame(site.meta)#
+#
+# classify EPA ecoregions into combined regions#
+groupA<-c("ARCTIC CORDILLERA","TUNDRA","TAIGA","HUDSON PLAIN")#
+groupB<-"NORTHERN FORESTS"#
+groupC<-c("NORTHWESTERN FORESTED MOUNTAINS","MARINE WEST COAST FOREST")#
+groupD<-"EASTERN TEMPERATE FORESTS"#
+groupE<-"GREAT PLAINS"#
+groupF<-c("MEDITERRANEAN CALIFORNIA","NORTH AMERICAN DESERTS","SOUTHERN SEMIARID HIGHLANDS","TEMPERATE SIERRAS")#
+groupG<-c("TROPICAL DRY FORESTS","TROPICAL WET FORESTS")#
+#
+site.meta$site.group[which(site.meta$ecoregion %in% groupA)]<-"A" # populate site.group column in site.meta table#
+site.meta$site.group[which(site.meta$ecoregion %in% groupB)]<-"B"#
+site.meta$site.group[which(site.meta$ecoregion %in% groupC)]<-"C"#
+site.meta$site.group[which(site.meta$ecoregion %in% groupD)]<-"D"#
+site.meta$site.group[which(site.meta$ecoregion %in% groupE)]<-"E"#
+site.meta$site.group[which(site.meta$ecoregion %in% groupF)]<-"F"#
+site.meta$site.group[which(site.meta$ecoregion %in% groupG)]<-"G"#
+#
+Aobj<-site.meta[which(site.meta$site.group %in% "A"),1] # list of neotoma db id numbers for sits in each group#
+Bobj<-site.meta[which(site.meta$site.group %in% "B"),1]#
+Cobj<-site.meta[which(site.meta$site.group %in% "C"),1]#
+Dobj<-site.meta[which(site.meta$site.group %in% "D"),1]#
+Eobj<-site.meta[which(site.meta$site.group %in% "E"),1]#
+Fobj<-site.meta[which(site.meta$site.group %in% "F"),1]#
+Gobj<-site.meta[which(site.meta$site.group %in% "G"),1]#
+#
+sites.inbin<-list(Aobj,Bobj,Cobj,Dobj,Eobj,Fobj,Gobj)#
+regions.lab<-c("A","B","C","D","E","F","G")#
+names(sites.inbin)<-regions.lab#
+#
+# add to sites metadata table: number of samples, time span, number of terrestrial taxa
+ecoregions<-readOGR("na_cec_eco_l1/NA_CEC_Eco_Level1.shp") # replace with appropriate file path
+~/Desktop/Research_Git/fourpointtwo/2022-01/na_cec_eco_l1/NA_CEC_Eco_Level1.shp
+ecoregions<-readOGR("~/Desktop/Research_Git/fourpointtwo/2022-01/na_cec_eco_l1/NA_CEC_Eco_Level1.shp") # replace with appropriate file path
+# FUNCTIONS ######################
+# LOAD FUNCTIONS__#
+source('PaleoVegChange_functions.R', chdir = TRUE)#
+#
+# ADDITIONAL FUNCTIONS FOR DEFIINING REGIONS___#
+extract.coords<-function(pol_dl_obj){#
+	coords<-matrix(NA,nc=3,nr=length(pol_dl_obj))#
+	for (i in 1:length(pol_dl_obj)){#
+		coords[i,]<-c(pol_dl_obj[[i]]$dataset$dataset.meta$dataset.id,pol_dl_obj[[i]]$dataset$site.data$long,pol_dl_obj[[i]]$dataset$site.data$lat)	#
+	}#
+	return(coords)#
+}#
+#
+# point.in.region________________________________#
+point.in.region<-function(point.long,point.lat,regionk){#
+	in.region<-c()#
+	for (i in 1:length(regionk@polygons)){#
+		in.polygon<-c()#
+		in.hole<-c()#
+		for(j in 1:length(regionk@polygons[[i]]@Polygons)){#
+			coords.ij<-regionk@polygons[[i]]@Polygons[[j]]@coords#
+			in.polygon[j]<-point.in.polygon(point.long,point.lat,coords.ij[,1],coords.ij[,2])#
+			if (regionk@polygons[[i]]@Polygons[[j]]@hole==TRUE){#
+				in.hole[j]<-1#
+			} else {#
+				in.hole[j]<-0#
+			}	#
+		}#
+		temp<-cbind(in.hole,in.polygon)#
+		if (sum(c(temp[,2]-temp[,1]) %in% 1)>0 && sum(c(temp[,2]-temp[,1]) %in% 0)==0){#
+			in.region[i]<-1#
+		} else {#
+			in.region[i]<-0#
+		}	#
+	}#
+#
+	if (sum(in.region)>0){ in.ecoregion<-1#
+	} else { in.ecoregion<-0 }	#
+	return(in.ecoregion)#
+}#
+#
+# assign.point________________________________________________________#
+assign.point<-function(point.long,point.lat,ecoregions){#
+	region.list<-unique(ecoregions$NA_L1NAME)#
+	region.list<-region.list[-1]#
+	classify.pt<-matrix(NA,nr=length(region.list),nc=2)#
+	for (i in 1:length(region.list)){#
+		regionk<-ecoregions[ecoregions$NA_L1NAME==region.list[i],]#
+		inYN<-point.in.region(point.long,point.lat,regionk)#
+		classify.pt[i,]<-c(as.character(region.list[i]),inYN)#
+	}#
+	classify.pt<-as.data.frame(classify.pt)#
+	if (sum(as.numeric(as.vector(classify.pt[,2])))==0){#
+	# some sites fall beyond the EPA ecoregion shapefiles#
+	# those sites are assigned to the nearest polygon in this if statement#
+		min.dist3<-c()#
+		for (i in 1:length(region.list)){#
+			regionk<-ecoregions[ecoregions$NA_L1NAME==region.list[i],]#
+			min.dist2<-c()#
+			for (j in 1:length(regionk@polygons)){#
+				min.dist<-c()#
+				for (k in 1: length(regionk@polygons[[j]]@Polygons)){#
+					coords.ij<-regionk@polygons[[j]]@Polygons[[k]]@coords#
+					min.dist[k]<-min(distGeo(c(point.long,point.lat),coords.ij))#
+				}#
+				min.dist2[j]<-min(min.dist)	#
+			}#
+			min.dist3[i]<-min(min.dist2)#
+		}	#
+		out<-as.character(region.list[which.min(min.dist3)])#
+	} else {#
+		out<-as.character(classify.pt[which(classify.pt[,2]==1),1])#
+	}#
+	return(out)#
+}#
+#
+# ANALYSES ########################################
+# SORT SITES INTO ECOREGIONS___#
+ecoregions<-spTransform(ecoregions,"+proj=longlat +datum=WGS84")
+site.coords<-extract.coords(pol_dlx)#
+#
+site.names<-c()#
+for (i in 1:length(pol_dlx)){#
+	site.names[i]<-pol_dlx[[i]]$dataset$site.data$site.name	#
+}#
+#
+ecoregs<-c()#
+for (k in 1:nrow(site.coords)){#
+	# print(k)#
+	ecoregs[k]<-assign.point(site.coords[k,2],site.coords[k,3],ecoregions)#
+}#
+# table(ecoregs)#
+#
+site.meta<-cbind(site.coords[,1],site.names,site.coords[,2:3],ecoregs,rep(NA,nrow(site.coords)))#
+colnames(site.meta)<-c("dataset.id","site.name","long","lat","ecoregion","site.group")#
+site.meta<-as.data.frame(site.meta)#
+#
 # classify EPA ecoregions into combined regions#
 groupA<-c("ARCTIC CORDILLERA","TUNDRA","TAIGA","HUDSON PLAIN")#
 groupB<-"NORTHERN FORESTS"#
@@ -909,42 +717,22 @@ Gobj<-site.meta[which(site.meta$site.group %in% "G"),1]#
 sites.inbin<-list(Aobj,Bobj,Cobj,Dobj,Eobj,Fobj,Gobj)#
 regions.lab<-c("A","B","C","D","E","F","G")#
 names(sites.inbin)<-regions.lab
-site.meta
-head(sites.meta)
-head(site.meta)
-i=1
-pol_dlx[[site.meta$dataset.id[i]]]
-site.i<-pol_dlx[[site.meta$dataset.id[i]]]
-names(site.i)
-site.i$sample.meta
-nrow(site.i$sample.meta) # number of samples
-range(site.i$sample.meta$age) # time span
-clean_pollen(site.i,type=pct,eco.group=c("TRSH","UPHE"))
-clean_pollen(site.i,type="pct",eco.group=c("TRSH","UPHE"))
-ncol(clean_pollen(site.i,type="pct",eco.group=c("TRSH","UPHE")))
 meta.out<-matrix(NA,nrow=nrow(site.meta),ncol=4)#
 for (i in 1:nrow(site.meta)){#
 	site.i<-pol_dlx[[site.meta$dataset.id[i]]]#
 	n.samp<-nrow(site.i$sample.meta) # number of samples#
-	age.range<-range(site.i$sample.meta$age) # time span#
+	# age.range<-round(range(site.i$sample.meta$age)) # time span#
 	n.terrestrial<-ncol(clean_pollen(site.i,type="pct",eco.group=c("TRSH","UPHE"))) # number of terrestrial pollen types#
+	pol_ds<-pol_dlx[[i]]#
+	handlej<-pol_ds$dataset$dataset.meta$collection.handle # get site handle#
+	handle.path<-paste(path,"/",handlej,sep="") #
+	file.name<-dir(handle.path,pattern="ages.txt") # use handle to import bacon iterations#
+	file.path<-paste(handle.path,"/",file.name,sep="")#
+	am<-read.table(file.path,header=T)#
+	age.range<-range(am$median)#
 	meta.out[i,]<-c(n.samp,n.terrestrial,age.range)#
 }
-meta.out
-meta.out<-matrix(NA,nrow=nrow(site.meta),ncol=4)#
-for (i in 1:nrow(site.meta)){#
-	site.i<-pol_dlx[[site.meta$dataset.id[i]]]#
-	n.samp<-nrow(site.i$sample.meta) # number of samples#
-	age.range<-round(range(site.i$sample.meta$age)) # time span#
-	n.terrestrial<-ncol(clean_pollen(site.i,type="pct",eco.group=c("TRSH","UPHE"))) # number of terrestrial pollen types#
-	meta.out[i,]<-c(n.samp,n.terrestrial,age.range)#
-}
-meta.out
 colnames(meta.out)<-c("N samples","N terrestrial pollen types","Age Younger","Age Older")
 meta.out
-head(site.meta)
 meta.data.full<-cbind(site.meta[1:4],meta.out,site.meta[,5:6])
-head(meta.data.full)
-site.meta[,6]
-write.csv(meta.data.full,"~/Desktop/Research_Git/fourpointtwo/2022-01/results/site-metadate.csv")
 write.csv(meta.data.full,"~/Desktop/Research_Git/fourpointtwo/2022-01/results/site-metadata.csv")
